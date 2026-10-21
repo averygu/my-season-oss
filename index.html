@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>我的这一季 · Season 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #ECE6D8; color: #1B1A17; }
+  * { box-sizing: border-box; }
+  /* hide scrollbars on horizontal scrollers */
+  div::-webkit-scrollbar { height: 0; width: 0; display: none; }
+  div { scrollbar-width: none; -ms-overflow-style: none; }
+  /* fadeIn for modal */
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  /* better text rendering for serif on dark */
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div style="min-height:100vh;display:grid;place-items:center;padding:32px;background:#F4F0E8;color:#1B1A17;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+    <div style="max-width:520px;border:1px solid rgba(27,26,23,0.12);background:rgba(255,255,255,0.52);box-shadow:0 24px 60px rgba(27,26,23,0.10);padding:28px;">
+      <div style="font:600 11px/1.2 'JetBrains Mono',monospace;letter-spacing:0;color:rgba(27,26,23,0.48);text-transform:uppercase;">S01·CANVAS LOADING</div>
+      <h1 style="margin:12px 0 10px;font:600 28px/1.18 'Noto Serif SC',serif;">正在装载 Season 2026 画布</h1>
+      <p style="margin:0 0 18px;font-size:14px;line-height:1.7;color:rgba(27,26,23,0.68);">如果这张首映卡停留太久，通常是 React、Babel 或网络资源还没有完成加载。</p>
+      <code style="display:block;padding:12px 14px;border:1px solid rgba(27,26,23,0.12);background:rgba(244,240,232,0.78);font:600 13px/1.4 'JetBrains Mono',monospace;color:#1B1A17;">Season 2026 · Preview canvas waiting</code>
+      <p style="margin:14px 0 0;font-size:13px;line-height:1.6;color:rgba(27,26,23,0.58);">加载完成后，8 张 iPhone artboard 会自动覆盖这张临时卡。</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  if (location.protocol !== 'file:') return;
+  const root = document.getElementById('root');
+  if (!root) return;
+  root.innerHTML = `
+    <div style="min-height:100vh;display:grid;place-items:center;padding:32px;background:#F4F0E8;color:#1B1A17;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+      <div style="max-width:520px;border:1px solid rgba(27,26,23,0.12);background:rgba(255,255,255,0.52);box-shadow:0 24px 60px rgba(27,26,23,0.10);padding:28px;">
+        <div style="font:600 11px/1.2 'JetBrains Mono',monospace;letter-spacing:0;color:rgba(27,26,23,0.48);text-transform:uppercase;">S01·LOCAL PREVIEW</div>
+        <h1 style="margin:12px 0 10px;font:600 28px/1.18 'Noto Serif SC',serif;">请用本地 HTTP 服务器打开</h1>
+        <p style="margin:0 0 18px;font-size:14px;line-height:1.7;color:rgba(27,26,23,0.68);">直接双击 index.html 会触发 file:// 限制，原型无法加载外部 .jsx 画布。</p>
+        <code style="display:block;padding:12px 14px;border:1px solid rgba(27,26,23,0.12);background:rgba(244,240,232,0.78);font:600 13px/1.4 'JetBrains Mono',monospace;color:#1B1A17;">python3 -m http.server 8765</code>
+        <p style="margin:14px 0 0;font-size:13px;line-height:1.6;color:rgba(27,26,23,0.58);">然后访问 http://localhost:8765/index.html。通过 HTTP 打开时，这段提示会被 React 画布自动覆盖。</p>
+      </div>
+    </div>
+  `;
+})();
+</script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="app/shared.jsx"></script>
+<script type="text/babel" src="app/season-home.jsx"></script>
+<script type="text/babel" src="app/episode.jsx"></script>
+<script type="text/babel" src="app/capture.jsx"></script>
+<script type="text/babel" src="app/cast.jsx"></script>
+<script type="text/babel" src="app/plotlines.jsx"></script>
+<script type="text/babel" src="app/cliffhangers.jsx"></script>
+<script type="text/babel" src="app/finale.jsx"></script>
+<script type="text/babel" src="app/v2-mvp.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+
+const PHONE_W = 390;
+const PHONE_H = 844;
+
+// ─────────────────────────────────────────────────────────────
+// Phone wrapper — wraps a screen in iOS frame + status bar
+// ─────────────────────────────────────────────────────────────
+function Phone({ children, label }) {
+  return (
+    <IOSDevice width={PHONE_W} height={PHONE_H} dark={false}>
+      <div style={{
+        position: 'absolute', inset: 0,
+        background: '#F4F0E8', overflow: 'hidden',
+      }} data-screen-label={label}>
+        {children}
+      </div>
+    </IOSDevice>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// Demo Tweaks defaults — captured by the host on edit
+// ─────────────────────────────────────────────────────────────
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "showAnnotations": true,
+  "highlightCurrent": true
+}/*EDITMODE-END*/;
+
+// ─────────────────────────────────────────────────────────────
+// App — design canvas with all 8 screens
+// ─────────────────────────────────────────────────────────────
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  return (
+    <React.Fragment>
+      <DesignCanvas>
+        <DCSection
+          id="v2-mvp"
+          title="我的这一季 · V2 MVP"
+          subtitle="2026-06-10 朋友测试后重设计 · 3 tab：今天(拍) / 本集(剪) / 本季(看) · 每屏一个主行动 · 今天屏文字 ≤ 20 词"
+        >
+          <DCArtboard id="v2-today" label="V2·01 今天 · 拍一条" width={PHONE_W} height={PHONE_H}>
+            <Phone label="V2 01 今天"><TodayPage /></Phone>
+          </DCArtboard>
+          <DCArtboard id="v2-episode" label="V2·02 本集 · 素材与剪辑日" width={PHONE_W} height={PHONE_H}>
+            <Phone label="V2 02 本集"><EpisodeLitePage /></Phone>
+          </DCArtboard>
+          <DCArtboard id="v2-season" label="V2·03 本季 · 海报墙与深度入口" width={PHONE_W} height={PHONE_H}>
+            <Phone label="V2 03 本季"><SeasonLitePage /></Phone>
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection
+          id="overview"
+          title="V1 · 完整探索版（参考）"
+          subtitle="A life-as-series journal · 8 artboards · 信息架构已被 V2 取代 · 保留作设计参考与「本季」二级页来源"
+        >
+          <DCArtboard id="season"  label="01 · Season 首页"     width={PHONE_W} height={PHONE_H}>
+            <Phone label="01 Season 首页"><SeasonHome /></Phone>
+          </DCArtboard>
+          <DCArtboard id="episode" label="02 · Episode E18 + 剪辑模式" width={PHONE_W} height={PHONE_H}>
+            <Phone label="02 Episode 详情"><EpisodePage /></Phone>
+          </DCArtboard>
+          <DCArtboard id="episode-edit" label="03 · 剪辑日 · Edit Night" width={PHONE_W} height={PHONE_H}>
+            <Phone label="03 剪辑日"><EpisodeWithEditOpen /></Phone>
+          </DCArtboard>
+          <DCArtboard id="cast" label="04 · Cast 人物图谱" width={PHONE_W} height={PHONE_H}>
+            <Phone label="04 Cast"><CastPage /></Phone>
+          </DCArtboard>
+          <DCArtboard id="plot" label="05 · Plot Lines · 含追溯/abandoned" width={PHONE_W} height={PHONE_H}>
+            <Phone label="05 Plot Lines"><PlotPage /></Phone>
+          </DCArtboard>
+          <DCArtboard id="cliff" label="06 · Cliffhangers · 未完待续" width={PHONE_W} height={PHONE_H}>
+            <Phone label="06 Cliffhangers"><CliffPage /></Phone>
+          </DCArtboard>
+          <DCArtboard id="finale" label="07 · Finale 预览 · 如果现在结束" width={PHONE_W} height={PHONE_H}>
+            <Phone label="07 Finale 预览"><FinalePage /></Phone>
+          </DCArtboard>
+          <DCArtboard id="capture" label="08 · 拍摄模式 · Raw Footage" width={PHONE_W} height={PHONE_H}>
+            <Phone label="08 拍摄模式"><CapturePage /></Phone>
+          </DCArtboard>
+        </DCSection>
+
+        <DCPostIt top={130} right={40} rotate={2.5} width={215}>
+          <strong style={{ fontFamily: '"Noto Serif SC", serif' }}>V2 重设计 · 来源：朋友测试</strong>
+          <div style={{ marginTop: 6, fontSize: 12, lineHeight: 1.5 }}>
+            「界面复杂、文字多、不知道从哪开始用」→
+            砍成 3 tab；每屏一个主行动；解释只留一句话；
+            人物 / 主线 / 悬念退到「本季」二级。
+          </div>
+        </DCPostIt>
+
+        <DCPostIt top={1185} left={48} rotate={-3} width={220}>
+          <strong style={{ fontFamily: '"Noto Serif SC", serif' }}>关键判断 · 这不是日记 app</strong>
+          <div style={{ marginTop: 6, fontSize: 12, lineHeight: 1.5 }}>
+            拍摄（fragment）和剪辑（episode）分离。
+            剪辑必须由用户亲手做，不交给算法。
+            一年 24 集，bi-weekly。漏录不破链。
+          </div>
+        </DCPostIt>
+
+        <DCPostIt top={1205} right={40} rotate={2.5} width={210}>
+          <strong style={{ fontFamily: '"Noto Serif SC", serif' }}>差异化的两个时刻</strong>
+          <div style={{ marginTop: 6, fontSize: 12, lineHeight: 1.5 }}>
+            ① 把 fragment 追溯升级为主线（Plot 页 · 紫框）<br/>
+            ② 把目标主动归档为 abandoned（不是失败 · 是腾位）
+          </div>
+        </DCPostIt>
+
+      </DesignCanvas>
+
+      <TweaksPanel title="Tweaks · 我的这一季">
+        <TweakSection title="演示状态">
+          <TweakToggle
+            label="显示设计注解"
+            value={tweaks.showAnnotations}
+            onChange={(v) => setTweak('showAnnotations', v)}
+          />
+          <TweakToggle
+            label="高亮当前集 (E18) 边框"
+            value={tweaks.highlightCurrent}
+            onChange={(v) => setTweak('highlightCurrent', v)}
+          />
+        </TweakSection>
+        <TweakSection title="说明">
+          <div style={{ fontSize: 12, color: 'rgba(41,38,27,0.55)', lineHeight: 1.5 }}>
+            顶部是 V2 MVP 三屏（今天 / 本集 / 本季）—— 2026-06-10 朋友测试后的重设计；下方保留 V1 八屏作设计参考。<br/><br/>
+            点击右下角放大图标可以全屏聚焦任意一屏，← / → / Esc 切换或退出。
+          </div>
+        </TweakSection>
+      </TweaksPanel>
+    </React.Fragment>
+  );
+}
+
+// Variant of EpisodePage with the Edit Night overlay open by default —
+// for the "剪辑日" artboard.
+function EpisodeWithEditOpen() {
+  return (
+    <React.Fragment>
+      <EpisodePage />
+      <ForceEditOpen />
+    </React.Fragment>
+  );
+}
+
+// helper that opens the edit overlay after mount via a click simulation —
+// simplest is to pass an `initiallyOpen` prop, but EpisodePage owns state.
+// Instead we render an isolated EditModeOverlay-equivalent stack on top.
+// (We re-export EditModeOverlay implicitly by importing the module.)
+function ForceEditOpen() {
+  // Click the "进入剪辑模式" button after mount
+  React.useEffect(() => {
+    const btns = Array.from(document.querySelectorAll('button'))
+      .filter(b => b.textContent && b.textContent.includes('进入剪辑模式'));
+    // pick the LAST one (each artboard renders its own)
+    const btn = btns[btns.length - 1];
+    if (btn) btn.click();
+  }, []);
+  return null;
+}
+
+if (location.protocol !== 'file:') {
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+}
+</script>
+</body>
+</html>
