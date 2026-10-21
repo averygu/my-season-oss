@@ -10,7 +10,7 @@ My Season is an early-stage narrative memory app. It treats a year as a season o
 
 - Capture text fragments and person tags.
 - Edit an episode manually: include/exclude fragments, choose a title and mood, then confirm.
-- Review completed episodes and mark or undo a quiet/off-season episode.
+- Add fragments to past, unedited episodes; review completed episodes; mark or undo a quiet/off-season episode.
 - Save records in browser storage; export/import JSON.
 - Optionally request scene groups, three titles and evidence-linked questions from a server-side AI adapter. AI failure leaves the manual flow available.
 
@@ -55,7 +55,7 @@ Records belong to the current browser/origin's localStorage, with an in-memory f
 
 This repository has no packaged automated test suite. Before submitting a change, check affected JavaScript/JSX, open the runnable app, and exercise capture → reload → manual edit → season review. Test import only with a disposable browser dataset because it replaces current data. AI validation should use mocked upstream responses before a separately authorized live call.
 
-Known gaps include limits on adding fragments to past episodes, AI input truncation and deployment abuse controls. The prototype is not a production multi-user service.
+Known gaps include AI input truncation and deployment abuse controls. The prototype is not a production multi-user service.
 
 ## Contributing
 

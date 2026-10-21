@@ -1,0 +1,14 @@
+.DS_Store
+*.zip
+deploy-public/
+node_modules/
+_screenshots/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.bundle
+.netlify/
+.claude/settings.local.json
+.agents/
